@@ -805,7 +805,7 @@
 		    		// nav-section first paragraph text, + bg image + menu-hint paragraph text + menu data and anchors
 		    		if(navSection[i].firstElementChild.tagName.toLowerCase() === 'p'){
 		    			navSection[i].firstElementChild.innerHTML = quickActions[i].label; 
-		    			navSection[i].style.backgroundImage = 'url("../img/' + quickActions[i].icon + '.png")';
+		    			navSection[i].style.backgroundImage = 'url("img/' + quickActions[i].icon + '.png")';
 		    		}
 		    		if(navSection[i].lastElementChild.className === 'menu' 
 		    			&& navSection[i].lastElementChild.firstElementChild.className === 'menu-hint'){
