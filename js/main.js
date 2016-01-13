@@ -155,7 +155,7 @@
 	    }, // end of startup function
 
 	    ajaxCall: function(){
-	    	UTILS.ajax(window.location +'/data/config.json', {
+	    	UTILS.ajax(location +'/data/config.json', {
 				done: function(response) {
 					if(response.notification){
 						notification.classList.remove('hidden');
