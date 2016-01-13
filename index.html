@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="x-ua-compatible" content="ie=edge">
+	<title>WebApp vanila javascript</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<link href='https://fonts.googleapis.com/css?family=Open+Sans:400,600' rel='stylesheet' type='text/css'>
+	<link rel="stylesheet" href="css/normalize.css">
+	<link rel="stylesheet" href="css/main.css">
+	<script src="js/vendor/modernizr-2.8.3.min.js"></script>
+</head>
+<body role="application">
+	<header>
+	  <div class="layout-wrap">
+	    <a id="logo" href="#">netcraft<img src="img/logo-netcraft.svg" alt="netcraft" tabindex="0"></a>
+
+	    <form class="search-box" method="get" role="search">
+	        <input type="search" name="q" placeholder="search" tabindex="0">
+	    </form>
+	  </div>
+	</header>
+
+	<div class="page-body layout-wrap" role="main">
+	    <div class="notifications hidden">
+	    </div>
+
+	    <nav role="navigation">
+	        <div class="nav-section">
+	            <p>loading data from json</p>
+
+	            <div class="menu" role="menubar">
+	                <div class="menu-hint" tabindex="0">
+	                    <p>loading data from json</p>
+	                    <div class="arrow"></div>
+	                </div>
+
+	                <ul class="action-list">
+	                </ul>
+	            </div>
+	        </div>
+
+	        <div class="nav-section">
+	            <p>loading data from json</p>
+
+	            <div class="menu">
+	                <div class="menu-hint" tabindex="0">
+	                    <p>loading data from json</p>
+	                    <div class="arrow"></div>
+	                </div>
+
+	                <ul class="action-list" aria-describedby="menu-hint">
+	                </ul>
+	            </div>
+	        </div>
+
+	        <div class="nav-section">
+	            <p>loading data from json</p>
+
+	            <div class="menu" role="menubar">
+	                <div class="menu-hint" tabindex="0">
+	                    <p>loading data from json</p>
+	                    <div class="arrow"></div>
+	                </div>
+
+	                <ul class="action-list">
+	                </ul>
+	            </div>
+	        </div>
+	    </nav>
+
+	    <div class="tabs" aria-multiselectable="false">
+	        <ul class="buttons" role="tab-button">
+	            <li class=""><a href="#quick-reports" data="qr" tabindex="0" role="tab" aria-controls="quick-reports" aria-owns="quick-reports"><i class="icon-external-link" aria-hidden="true"></i> Quick Reports</a>
+	            </li>
+	            <li><a href="#fmy-folders" tabindex="0" role="tab" aria-controls="fmy-folders" aria-owns="fmy-folders"><i class="icon-star-o" aria-hidden="true"></i> My Folders</a>
+	            </li>
+	            <li><a href="#my-team-folders" data="mtf" tabindex="0" role="tab" aria-controls="my-team-folders" aria-owns="my-team-folders"><i class="icon-folder-open-o" aria-hidden="true"></i>My Team Folders</a>
+	            </li>
+	            <li><a href="#public-folders" tabindex="0" role="tab" aria-controls="public-folders" aria-owns="public-folders"><i class="icon-copy" aria-hidden="true"></i>Public Folders</a>
+	            </li>
+	        </ul>
+
+	        <div id="quick-reports" class="hidden" frame="1" role="tabpanel" aria-describedby="quickReports">
+	        	<div class="settings">
+	        		<ul>
+	        			<li><a href="" class='toggle' data='qr' tabindex="0"><img src="img/settings.png" alt="settings button"></a></li>
+	        			<li><a href="" class='expand hidden' data='qr' target='_blank' tabindex="0"><img src="img/expand.png" alt="expand button"></a></li>
+	        		</ul>
+	        		<select class="drop-down hidden" data='qr'></select>
+	        		<div class="popup-menu" data='qr'>
+	        			<form novalidate>
+		        			<fieldset>
+		        				<legend>Report 01:</legend>
+	        					<div class="input-validation">
+	        						<label for="qr-name1">Name:</label>
+		        					<input id="qr-name1" type="text" placeholder="Enter site name" aria-required="true" aria-labelledby="qr-name1">
+		        					<p class="name-message hidden">Invalid name</p>
+	        					</div>
+	        					<div class="input-validation">
+	        						<label for="qr-url1">Url:</label>
+		        					<input id="qr-url1" type="text" placeholder="Enter site Url" aria-required="true" aria-labelledby="qr-url1">
+		        					<p class="url-message hidden">Invalid URL</p>
+	        					</div>
+		        			</fieldset>
+	        				<fieldset>
+		        				<legend>Report 02:</legend>
+		        				<div class="input-validation">
+		        					<label for="qr-name2">Name:</label>
+		        					<input id="qr-name2" type="text" placeholder="Enter site name" aria-required="true" aria-labelledby="qr-name2">
+		        					<p class="name-message hidden">Invalid name</p>
+	        					</div>
+	        					<div class="input-validation">
+		        					<label for="qr-url2">Url:</label>
+		        					<input id="qr-url2" type="text" placeholder="Enter site Url" aria-required="true" aria-labelledby="qr-url2">
+		        					<p class="url-message hidden">Invalid URL</p>
+	        					</div>
+		        			</fieldset>
+		        			<fieldset>
+		        				<legend>Report 03:</legend>
+	        					<div class="input-validation">
+		        					<label for="qr-name3">Name:</label>
+		        					<input id="qr-name3" type="text" placeholder="Enter site name" aria-required="true" aria-labelledby="qr-name3">
+		        					<p class="name-message hidden">Invalid name</p>
+	        					</div>
+	        					<div class="input-validation">
+		        					<label for="qr-url3">Url:</label>
+		        					<input id="qr-url3" type="text" placeholder="Enter site Url" aria-required="true" aria-labelledby="qr-url3">
+		        					<p class="url-message hidden">Invalid URL</p>
+	        					</div>
+		        			</fieldset>
+		        			<input class="popup-button" type="reset" value="cancel" data="qr" role="reset">
+		        			<input class="popup-button" type="submit" value="save" data="qr" role="submit">
+	        			</form>
+	        		</div>
+	        	</div>
+	        	<iframe class="frame" src="" data='qr'></iframe>
+	        </div>
+
+	        <div id="fmy-folders" class="hidden" frame="2" role="tabpanel" aria-describedby="myFolders">
+	        	<div class="settings">
+	        		<ul>
+	        			<li><a href="#" class='expand' target="_blank" tabindex="0"><img src="img/expand.png" alt="settings button"></a></li>
+	        		</ul>
+	        	</div>
+	        <iframe class="frame" src="#"></iframe>
+	        </div>
+
+	        <div id="my-team-folders" class="hidden" frame="3" role="tabpanel" aria-describedby="myTeamFolders">
+		        <div class="settings">
+		        		<ul>
+			        		<li><a href="" class='toggle' data='mtf' tabindex="0"><img src="img/settings.png" alt="settings button"></a></li>
+			        		<li><a href="" class='expand hidden' data='mtf' target="_blank" tabindex="0"><img src="img/expand.png" alt="expand button"></a></li>
+			        	</ul>
+			        	<select class="drop-down hidden" data='mtf'></select>
+			        	<div class="popup-menu" data='mtf'>
+		        			<form>
+			        			<fieldset>
+		        				<legend>Report 01:</legend>
+	        					<div class="input-validation">
+	        						<label for="mtf-name1">Name:</label>
+		        					<input id="mtf-name1" type="text" placeholder="Enter site name" aria-required="true" aria-labelledby="mtf-name1">
+		        					<p class="name-message hidden">Invalid name</p>
+	        					</div>
+	        					<div class="input-validation">
+	        						<label for="mtf-url1">Url:</label>
+		        					<input id="mtf-url1" type="text" placeholder="Enter site Url" aria-required="true" aria-labelledby="mtf-url1">
+		        					<p class="url-message hidden">Invalid URL</p>
+	        					</div>
+		        			</fieldset>
+	        				<fieldset>
+		        				<legend>Report 02:</legend>
+		        				<div class="input-validation">
+		        					<label for="mtf-name2">Name:</label>
+		        					<input id="mtf-name2" type="text" placeholder="Enter site name" aria-required="true" aria-labelledby="mtf-name2">
+		        					<p class="name-message hidden">Invalid name</p>
+	        					</div>
+	        					<div class="input-validation">
+		        					<label for="mtf-url2">Url:</label>
+		        					<input id="mtf-url2" type="text" placeholder="Enter site Url" aria-required="true" aria-labelledby="mtf-url2">
+		        					<p class="url-message hidden">Invalid URL</p>
+	        					</div>
+		        			</fieldset>
+		        			<fieldset>
+		        				<legend>Report 03:</legend>
+	        					<div class="input-validation">
+		        					<label for="mtf-name3">Name:</label>
+		        					<input id="mtf-name3" type="text" placeholder="Enter site name" aria-required="true" aria-labelledby="mtf-name3">
+		        					<p class="name-message hidden">Invalid name</p>
+	        					</div>
+	        					<div class="input-validation">
+		        					<label for="mtf-url3">Url:</label>
+		        					<input id="mtf-url3" type="text" placeholder="Enter site Url" aria-required="true" aria-labelledby="mtf-url3">
+		        					<p class="url-message hidden">Invalid URL</p>
+	        					</div>
+		        			</fieldset>
+			        			<input class="popup-button" type="reset" value="cancel" data="mtf" role="reset">
+			        			<input class="popup-button" type="submit" value="save" data="mtf" role="submit">
+		        			</form>
+		        		</div>
+		        	</div>
+		        <iframe class="frame" src="" data='mtf'></iframe>
+	        </div>
+
+	        <div id="public-folders" class="hidden" frame="4" role="tabpanel" aria-describedby="publicFolders">
+	        <div class="settings">
+	        		<ul>
+						<li><a href="#" class='expand' target="_blank" tabindex="0"><img src="img/expand.png" alt="expand button"></a></li>
+					</ul>
+	        	</div>
+	        <iframe class="frame" src="#"></iframe>
+	        </div>
+	    </div>
+	</div>
+	<script src="js/plugins.js"></script>
+	<script src="js/main.js"></script>
+</body>
+</html>
+
